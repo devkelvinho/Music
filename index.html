@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Effects</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="sec">
+      <div>
+        <video autoplay muted loop>
+          <source src="video/bg.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div>
+        <audio src="audio">
+          <source src="video/TOMOSUKE_LOVE IS ORANGE.mp3">
+        </audio>
+      </div>
+      <h2>Music</h2>
+      <div>
+        <button id="start">play</button>
+      </div>
+      <div class="mobile-menu"></div>
+      <div class="dot"></div>
+    </section>
+    <script>
+      //adicionar aula ativa com clique
+      const dot = document.querySelector('.dot')
+      const sec = document.querySelector('.sec')
+      dot.onclick = function () {
+        dot.classList.toggle('active')
+        sec.classList.toggle('active')
+      }
+      document.addEventListener('mousemove', function (e) {
+        const dot = document.querySelector('.dot')
+        // dot.style.left = e.pageX + 'px'
+        // dot.style.top = e.pageY + 'px'
+      })
+    </script>
+  </body>
+</html>
